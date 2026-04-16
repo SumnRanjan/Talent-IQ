@@ -6,6 +6,7 @@ import HomePage from "./Pages/HomePage";
 import ProblemsPage from "./Pages/ProblemsPage";
 import DashboardPage from "./Pages/DashBoardPage";
 import ProblemPage from "./Pages/ProblemPage";
+import SessionPage from "./Pages/SessionPage";
 
 function App() {
   const { isSignedIn , isLoaded } = useUser();
@@ -20,6 +21,7 @@ function App() {
         <Route path="/dashboard" element={isSignedIn ? <DashboardPage /> :  <Navigate to="/" /> } />
         <Route path="/problems" element={isSignedIn ? <ProblemsPage /> : <Navigate to="/" />} />
         <Route path="/problem/:id" element={isSignedIn ? <ProblemPage /> : <Navigate to="/" />} />
+        <Route path="/session/:id" element={isSignedIn ? <SessionPage /> : <Navigate to={"/"} />} />
       </Routes>
 
       <Toaster position="top-right" toastOptions={{duration : 3000}} />
