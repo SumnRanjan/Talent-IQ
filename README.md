@@ -13,8 +13,8 @@ A full-stack MERN-based real-time coding interview platform that enables users t
 Submitted in partial fulfillment of the requirements for the award of degree of:
 
 ### 🎓 Bachelor of Engineering  
-**In** Computer Science and Engineering  
-**In** Chitkara University , Rajpura
+Computer Science and Engineering  
+Chitkara University , Rajpura
 
 
 ---
