@@ -1,38 +1,77 @@
-# 🚀 Talent-Q – Group Coding Interview Platform
+# 🚀 Talent-IQ
 
 A full-stack MERN-based real-time coding interview platform that enables users to collaborate through video calls, live chat, and code execution in a shared environment.
 
 ---
 
+## 🎓 Academic Project Information
+
+### 📄 Project Report of Industry Oriented Hands-On Experience (IOHE)
+
+**Project Title:** Talent-IQ
+
+Submitted in partial fulfillment of the requirements for the award of degree of:
+
+### 🎓 Bachelor of Engineering  
+**In** Computer Science and Engineering  
+**In** Chitkara University , Rajpura
+
+
+---
+
+## 👨‍💻 Submitted By
+
+- **Suman Ranjan** — 2210990872  
+- **Shaurya Thakur** — 2210990817  
+- **Vanshika** — 2210990943  
+- **Swayam Bansal** — 2210990883  
+
+---
+
+## 👩‍🏫 Supervised By
+
+- **Dr. Monika Aggarwal**  
+- Assistant Professor, CUIET  
+- Chitkara University, Rajpura  
+
+---
+
+## 📊 Project Status
+
+✅ Completed  
+
+---
+
+## 📌 Project Type
+
+- Industry Oriented Hands-On Experience (IOHE)  
+- Full Stack + Real-Time Collaboration System  
+
+---
+
 ## 🌟 Features
 
-* 🔐 **Authentication (Clerk)**
+* 🔐 **Authentication (Clerk)**  
+  - Secure and scalable authentication  
+  - Session management & protected routes  
 
-  * Secure and scalable authentication
-  * Session management & protected routes
+* 🎥 **Real-Time Video Calls**  
+  - Powered by Stream Video SDK  
+  - Smooth group communication  
 
-* 🎥 **Real-Time Video Calls**
+* 💬 **Live Chat**  
+  - Real-time messaging using Stream Chat  
 
-  * Powered by Stream Video SDK
-  * Smooth group communication
+* 💻 **Online Code Editor**  
+  - Monaco Editor integration  
+  - Multi-language execution using Judge0 API  
 
-* 💬 **Live Chat**
+* 👥 **Group Interview Rooms**  
+  - Multiple users can join simultaneously  
 
-  * Real-time messaging using Stream Chat
-
-* 💻 **Online Code Editor**
-
-  * Monaco Editor integration
-  * Multi-language execution using Judge0 API
-
-* 👥 **Group Interview Rooms**
-
-  * Multiple users can join simultaneously
-
-* ⚡ **Modern UI**
-
-  * Tailwind CSS + DaisyUI
-  * Responsive design
+* ⚡ **Modern UI**  
+  - Tailwind CSS + DaisyUI  
+  - Responsive design  
 
 ---
 
@@ -40,28 +79,29 @@ A full-stack MERN-based real-time coding interview platform that enables users t
 
 ### Frontend
 
-* React (Vite)
-* Tailwind CSS + DaisyUI
-* React Query (TanStack)
-* Monaco Editor
-* Stream Video & Chat SDK
-* Clerk React SDK
+* React (Vite)  
+* Tailwind CSS + DaisyUI  
+* React Query (TanStack)  
+* Monaco Editor  
+* Stream Video & Chat SDK  
+* Clerk React SDK  
 
 ### Backend
 
-* Node.js
-* Express.js
-* MongoDB (Mongoose)
-* Clerk Backend SDK
-* Stream Node SDK
+* Node.js  
+* Express.js  
+* MongoDB (Mongoose)  
+* Clerk Backend SDK  
+* Stream Node SDK  
 
 ### APIs & Services
 
-* Clerk → Authentication
-* Stream → Video Calls & Chat
-* Judge0 → Code Execution
+* Clerk → Authentication  
+* Stream → Video Calls & Chat  
+* Judge0 → Code Execution  
 
 ---
+
 
 ## 📂 Project Structure
 
