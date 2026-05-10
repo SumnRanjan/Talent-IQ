@@ -1,43 +1,46 @@
-import express from "express"
-import path from 'path'
-import cors from 'cors'
-import { serve } from "inngest/express"
-import { clerkMiddleware } from '@clerk/express'
+import express from "express";
+import cors from "cors";
+import { serve } from "inngest/express";
+import { clerkMiddleware } from "@clerk/express";
 
+import { ENV } from "./lib/env.js";
+import { connectDB } from "./lib/db.js";
+import { inngest, functions } from "./lib/inngest.js";
 
-import { ENV } from "./lib/env.js"
-import { connectDB } from "./lib/db.js"
-import { inngest , functions} from "./lib/inngest.js"
-import { protectRoute } from "./middleware/protectRoute.js"
-import chatRoutes from "./routes/chatRoutes.js"
-import sessionRoutes from "./routes/sessionRoutes.js"
+import chatRoutes from "./routes/chatRoutes.js";
+import sessionRoutes from "./routes/sessionRoutes.js";
 
-const app = express()
+const app = express();
 
-app.use(express.json())
+app.use(express.json());
+
 app.use(cors({
   origin: [ENV.CLIENT_URL],
   credentials: true,
-})); // credentials true mean => server allows a browers to include  cookies on request
-app.use(clerkMiddleware()) // this adds auth field to req obj : req.auth()
+}));
 
-app.use("/api/inngest" , serve({client : inngest , functions}))
-app.use("/api/chat" , chatRoutes);
-app.use("/api/sessions" , sessionRoutes);
+app.use(clerkMiddleware());
 
-const __dirname = path.resolve()
+app.use("/api/inngest", serve({ client: inngest, functions }));
 
-app.get("/hello" , (req , res)=>{
-    res.status(200).json({msg : "success form apiss"})
-})
+app.use("/api/chat", chatRoutes);
+app.use("/api/sessions", sessionRoutes);
+
+app.get("/test", (req, res) => {
+  res.status(200).json({ msg: "success from api" });
+});
 
 const startServer = async () => {
   try {
     await connectDB();
-    app.listen(ENV.PORT, () => console.log("Server is running at port 3000"))
-  } catch (error) {
-    console.error("Error starting the server", error)
-  }
-}
 
-startServer()
+    app.listen(ENV.PORT, () =>
+      console.log(`Server is running at port ${ENV.PORT}`)
+    );
+
+  } catch (error) {
+    console.error("Error starting server", error);
+  }
+};
+
+startServer();
